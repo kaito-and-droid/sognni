@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="label_title">Title</string>
+    <string name="label_artist">Artist</string>
+    <string name="label_date">Date</string>
+    <string name="label_dimensions">Dimensions</string>
+    <string name="label_medium">Medium</string>
+    <string name="label_department">Department</string>
+    <string name="label_repository">Repository</string>
+    <string name="label_credits">Credits</string>
+
+    <string name="back">Back</string>
+
+    <string name="no_data_available">No data available</string>
+
+    <string name="onboard_title_1">Exclusive sounds</string>
+    <string name="onboard_desc_1">We have an author's library of sounds that you will not find anywhere else</string>
+
+    <string name="onboard_title_2">Relax sleep sounds</string>
+    <string name="onboard_desc_2">Our sound will help to relax and improve your sleep health</string>
+
+    <string name="onboard_title_3">Story for kids</string>
+    <string name="onboard_desc_3">Famous fairy tales with soothing sounds will help your children fall asleep faster</string>
+
+    <string name="next">Next</string>
+    <string name="start">Start</string>
+</resources>
