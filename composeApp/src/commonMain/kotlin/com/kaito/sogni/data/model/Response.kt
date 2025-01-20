@@ -3,12 +3,6 @@ package com.kaito.sogni.data.model
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
-@Serializable
-data class GenerativeImageResponse(
-    val status: String,
-    val items: List<ImageResponse>,
-    val cost: Float
-)
 
 @Serializable
 data class ImageResponse(

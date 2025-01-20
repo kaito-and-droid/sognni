@@ -5,7 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.kaito.sogni.data.model.Config
 import com.kaito.sogni.data.model.DataState
 import com.kaito.sogni.data.model.GenerativeImageRequest
-import com.kaito.sogni.data.model.GenerativeImageResponse
+import com.kaito.sogni.data.model.ImageResponse
 import com.kaito.sogni.data.model.ModelStatus
 import com.kaito.sogni.data.model.Reward
 import com.kaito.sogni.data.model.SogniExp
@@ -31,8 +31,8 @@ class AppVM(
     val commands: StateFlow<Command>
         get() = _commands.asStateFlow()
 
-    private val _images: MutableStateFlow<DataState<GenerativeImageResponse>> = MutableStateFlow(DataState.Init)
-    val images: StateFlow<DataState<GenerativeImageResponse>>
+    private val _images: MutableStateFlow<DataState<ImageResponse>> = MutableStateFlow(DataState.Init)
+    val images: StateFlow<DataState<ImageResponse>>
         get() = _images.asStateFlow()
 
     init {
@@ -72,9 +72,8 @@ class AppVM(
 
     fun generateImage(prompt: String) = viewModelScope.launch(Dispatchers.IO) {
         val request = GenerativeImageRequest(
-            providers = "openai",
-            text = prompt,
-            resolution = "512x512"
+            prompt = prompt,
+            style = "anime"
         )
         _config.value = _config.value.copy(status = ModelStatus.Imagining)
         _images.value = DataState.Loading

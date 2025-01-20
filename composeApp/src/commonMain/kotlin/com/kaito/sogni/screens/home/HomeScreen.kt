@@ -56,15 +56,20 @@ fun HomeScreen(
                             .padding(horizontal = 16.dp)
                             .height(360.dp)
                             .fillMaxWidth(),
-                        model = it.data.items.first().url,
+                        model = it.data.url,
                         contentDescription = null,
                         contentScale = ContentScale.FillBounds
                     )
                 }
                 is DataState.Failure -> {
-                    Text(
-                        text = "Failed to load image"
-                    )
+                    Box(
+                        modifier = Modifier.fillMaxSize(),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(
+                            text = "Failed to load image"
+                        )
+                    }
                 }
                 else -> {
 
